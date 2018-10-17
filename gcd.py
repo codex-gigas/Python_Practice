@@ -1,10 +1,8 @@
 def gcd(m,n):
-    while (m%n) != 0:
-        oldm = m
-        oldn = n
+	for i in range(1,min(m,n)+1):
+		if (m%i)==0 and (n%i)==0:
+			result=i
+	return(result)
 
-        m = oldn
-        n = oldm%oldn
-    return n
-
-print(gcd(14,63))
+v=gcd(81,153)
+print(v)
